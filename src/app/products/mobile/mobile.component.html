@@ -1,0 +1,35 @@
+<!-- Interpolation -->
+<h1>{{title}}</h1>
+<ul>
+<li *ngFor="let names of name">{{names}}</li>
+</ul>
+<p>{{type}}</p>
+
+<!-- Property Binding -->
+<input type="text" [value]="property"><br>
+<br>
+
+<!-- Event Binding -->
+
+<button (click)='add()'>EventBinding</button><br><br>
+
+<!-- Two way Binding -->
+
+Two Way DataBinding:<input [(ngModel)]="fullName" />
+<p>{{fullName}}</p>
+
+
+<!-- Events In Angular -->
+
+get the value direct in console as enter<input type="text" #box (keyup)="myEvent(box.value)"><br><br>
+get the value in console when i press enter<input type="text" #box1 (keyup.enter)="myEvent(box1.value)"><br><br>
+get the value in console when i press space<input type="text" #box2 (keyup.space)="myEvent(box2.value)"><br><br>
+get tHE value direct to the console when key is released<input type="text" #box3 (keydown)="myEvent(box3.value)"><br><br>
+It is blur eventget the value in console when i click mouse out side the text field<input type="text" #box4 (blur)="myEvent(box4.value)"><br><br>
+
+<div
+(mouseover)="myEvent('mouse in')"
+style="background-color: aqua;">mouse over</div><br>
+<div
+(mouseleave)="myEvent('mouse out')"
+style="background-color:yellowgreen;">mouse leaver</div><br>

@@ -1,0 +1,11 @@
+<h1>Data Binding</h1>
+<h1>Styling</h1>
+<p [ngStyle]="{color: 'red'}">Hello NgStyle set color to Red</p>
+<hr>
+<div [ngClass]="'color'">ngClass Example Done Here</div> <!--.color is defined in css file-->
+<hr>
+<p  [style.color]="fontColor">You can set my color in the component!</p>
+
+<button (click)="sayMessage()" [disabled]="canClick">Trigger alert message or disabled</button>
+<hr>
+<app-mobile></app-mobile>
